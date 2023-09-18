@@ -3,7 +3,7 @@ import Layout from "./components/Layout";
 import React from "react";
 import Typical from "react-typical";
 import { AiFillGithub, AiOutlineLinkedin } from "react-icons/ai";
-import { SiLinktree, SiWakatime } from "react-icons/si";
+import { SiBuymeacoffee, SiWakatime } from "react-icons/si";
 // import Link from 'next/link';
 const TypingAnimation = React.memo(
   () => {
@@ -27,7 +27,10 @@ const TypingAnimation = React.memo(
 
 function App() {
   return (
-    <Layout title={"Portfolio"} description={"HLLBR portfolio"}>
+    <Layout
+      title={"Halil İbrahim KOÇAK Portfolio"}
+      description={"HLLBR portfolio"}
+    >
       <motion.img
         src="/images/coffeeMan.png"
         alt="coffeeMan"
@@ -91,15 +94,15 @@ function App() {
               >
                 <SiWakatime className="w-8 h-8 fill-current" />
               </motion.a>
-              {/* <motion.a
-                href="https://linktr.ee/hllbr"
+              <motion.a
+                href="https://www.buymeacoffee.com/hllbr"
                 target="*_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center text-gray-800 transition-colors duration-300 dark:text-gray-100 dark:hover:text-pinkish-200 hover:text-pinkish-200"
                 whileHover={{ scale: 1.1 }}
               >
-                <SiLinktree className="w-8 h-8 fill-current" />
-              </motion.a> */}
+                <SiBuymeacoffee className="w-8 h-8 fill-current" />
+              </motion.a>
             </div>
           </div>
           {/* Code Area */}
@@ -143,9 +146,8 @@ function App() {
                     <a className="transition duration-300" href="/projects">
                       Projects
                     </a>
-
                     <a
-                      href="https://www.youtube.com/@platonfarkndapaylasmlar637"
+                      href="https://www.youtube.com/@platonfarkndapaylasmlar637/videos"
                       target={"_blank"}
                       rel="noopener noreferrer"
                       className="transition duration-300"
@@ -161,6 +163,5 @@ function App() {
       </main>
     </Layout>
   );
-}
-
+  }
 export default App;
