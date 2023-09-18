@@ -145,7 +145,7 @@ function App() {
                     </a>
 
                     <a
-                      href="https://www.youtube.com/channel/UCfGXEo2uCkVqcIqkIaFNGcA"
+                      href="https://www.youtube.com/@platonfarkndapaylasmlar637"
                       target={"_blank"}
                       rel="noopener noreferrer"
                       className="transition duration-300"
