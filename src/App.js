@@ -4,7 +4,8 @@ import React from "react";
 import Typical from "react-typical";
 import { AiFillGithub, AiOutlineLinkedin } from "react-icons/ai";
 import { SiBuymeacoffee, SiWakatime } from "react-icons/si";
-// import Link from 'next/link';
+import { Link } from 'react-router-dom';
+
 const TypingAnimation = React.memo(
   () => {
     return (
@@ -16,7 +17,9 @@ const TypingAnimation = React.memo(
           2000,
           "The Inventor",
           2000,
-          "Experienced Manual Tester",
+          "Software Test Engineer",
+          2000,
+          "AI Prompter",
           2000,
         ]}
       />
@@ -143,9 +146,9 @@ function App() {
                   </div>
 
                   <div className="flex items-center space-x-8">
-                    <a className="transition duration-300" href="/projects">
-                      Projects
-                    </a>
+                  <Link to="/projects" className="transition duration-300">
+        Projects
+      </Link>
                     <a
                       href="https://www.youtube.com/@platonfarkndapaylasmlar637/videos"
                       target={"_blank"}
@@ -163,5 +166,5 @@ function App() {
       </main>
     </Layout>
   );
-  }
+}
 export default App;

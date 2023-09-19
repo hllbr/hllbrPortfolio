@@ -1,18 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { ThemeProvider } from 'next-themes';
-import './index.css';
-import App from './App';
-import MainPage from './pages/MainPage';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { ThemeProvider } from "next-themes";
+import "./index.css";
+import App from "./App";
+import ProjectsPage from "./pages/Projects"
+import reportWebVitals from "./reportWebVitals";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <ThemeProvider attribute='class'>
+  <>
   <React.StrictMode>
-    <App />
+    <ThemeProvider attribute="class">
+    <Router>
+      <Routes>
+        <Route path="/home" element={<App />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/" element={<Navigate replace to="/home" />} />
+      </Routes>
+    </Router>
+    </ThemeProvider>
   </React.StrictMode>
-</ThemeProvider>
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function
