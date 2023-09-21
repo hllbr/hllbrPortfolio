@@ -4,7 +4,6 @@ import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
-
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
@@ -13,7 +12,7 @@ const Header = () => {
     <header className="flex items-center justify-between text-white px-6 py-4 h-16 max-w-5xl mx-auto mt-12 bg-transparent">
       <span></span>
       <button
-        className="px-6 py-2 bg-green-600 dark:bg-yellow-600 text-white rounded-md font-semibold uppercase"
+        className="px-6 py-2 bg-slate-800 dark:bg-yellow-600 text-white rounded-md font-semibold uppercase"
         onClick={toggleTheme}
       >
         {theme === "dark" ? (

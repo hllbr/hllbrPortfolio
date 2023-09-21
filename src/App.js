@@ -97,7 +97,7 @@ function App() {
               >
                 <SiWakatime className="w-8 h-8 fill-current" />
               </motion.a>
-              <motion.a
+              {/* <motion.a
                 href="https://www.buymeacoffee.com/hllbr"
                 target="*_blank"
                 rel="noopener noreferrer"
@@ -105,7 +105,7 @@ function App() {
                 whileHover={{ scale: 1.1 }}
               >
                 <SiBuymeacoffee className="w-8 h-8 fill-current" />
-              </motion.a>
+              </motion.a> */}
             </div>
           </div>
           {/* Code Area */}
