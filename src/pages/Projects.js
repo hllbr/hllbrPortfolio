@@ -2,9 +2,17 @@ import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import { RxThickArrowLeft } from "react-icons/rx";
 import { motion } from "framer-motion";
-import { getAllProjects } from "../functions/getAllProjects";
+// import { getAllProjects } from "../functions/getAllProjects";
+import { GraphQLClient, gql } from "graphql-request";
+import ProjectCard from "../components/ProjectCard";
+// import { graphcms } from "../client";
+import { useQuery } from "@apollo/client";
+import { GET_PROJECTS } from "../Apollo/queries.js"; // GraphQL sorgunuzu import edin
 
-export default function ProjectsPage({projects}) {
+export default function ProjectsPage() {
+  const { loading, error, data } = useQuery(GET_PROJECTS);
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
   return (
     <Layout title={"Portfolio / Projects"} description={"My Projects"}>
       <section className="h-full max-w-5xl pt-4 mx-auto mb-16 md:pt-16">
@@ -20,17 +28,11 @@ export default function ProjectsPage({projects}) {
         </Link>
         {/*Projects*/}
         <div className="grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-2">
-            
+          {data.projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
         </div>
       </section>
     </Layout>
   );
 }
-export const getStaticProps = async () => {
-    const projects = await getAllProjects();
-    return {
-      props: {
-        projects,
-      },
-    };
-  };

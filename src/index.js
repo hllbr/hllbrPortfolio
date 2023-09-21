@@ -11,21 +11,33 @@ import {
   Route,
   Navigate,
 } from 'react-router-dom';
+import { ApolloProvider } from "@apollo/client";
+import client from "./Apollo/ApolloClient";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
   <React.StrictMode>
-    <ThemeProvider attribute="class">
-    <Router>
-      <Routes>
-        <Route path="/home" element={<App />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/" element={<Navigate replace to="/home" />} />
-      </Routes>
-    </Router>
-    </ThemeProvider>
-  </React.StrictMode>
+      <ThemeProvider attribute="class">
+        <Router>
+          <Routes>
+            {/* Aşağıdaki yol doğrudur */}
+            <Route path="/home" element={<App />} />
+
+            {/* Apollo verilerine ihtiyaç duyan belirli rotayı veya bileşeni sarmalayın */}
+            <Route path="/projects" element={
+              <ApolloProvider client={client}>
+                <ProjectsPage />
+              </ApolloProvider>
+            } />
+
+            {/* Diğer rotalarınızı burada tanımlayın */}
+            
+            <Route path="/" element={<Navigate replace to="/home" />} />
+          </Routes>
+        </Router>
+      </ThemeProvider>
+    </React.StrictMode>
   </>
 );
 

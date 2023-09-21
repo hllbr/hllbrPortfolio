@@ -89,7 +89,7 @@ function App() {
                 <AiOutlineLinkedin className="w-8 h-8 fill-current" />
               </motion.a>
               <motion.a
-                href="https://github.com/hllbr"
+                href="https://wakatime.com/@HLLBR"
                 target="*_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center text-gray-800 transition-colors duration-300 dark:text-gray-100 dark:hover:text-pinkish-200 hover:text-pinkish-200"
