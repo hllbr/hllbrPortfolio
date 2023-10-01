@@ -4,7 +4,7 @@ import React from "react";
 import Typical from "react-typical";
 import { AiFillGithub, AiOutlineLinkedin } from "react-icons/ai";
 import { SiBuymeacoffee, SiWakatime } from "react-icons/si";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const TypingAnimation = React.memo(
   () => {
@@ -109,7 +109,7 @@ function App() {
             </div>
           </div>
           {/* Code Area */}
-          <article className="mt-3 prose md:mt-4 md:prose-lg dark:prose-dark ">
+          <article className="mt-3 prose md:mt-4 md:prose-xl dark:prose-dark ">
             <div>
               <pre>
                 <code className="language-js">
@@ -118,8 +118,7 @@ function App() {
                   </div>
                   <p>
                     <span className="text-gray-500">//</span>{" "}
-                    <span className="text-purple-300">Todo:</span> You can drag
-                    these balloons I'm really in love with them 🎈🎈
+                    <span className="text-purple-300">Todo:</span> You can drag these coffees, I'm really in love with them ☕☕️ 
                   </p>
 
                   <div className="flex items-center space-x-4">
@@ -131,24 +130,43 @@ function App() {
 
                     <div className="">
                       <p className="text-sm">
-                        <span className="text-pink-300"> {">"} </span> const
-                        techWeb
-                        <span className="font-bold text-pink-300">2</span> =
-                        ["Reactjs", "Nextjs", "Graphql", "Nodejs"];{" "}
+                        <span className="text-blue-300  dark:text-pink-300">
+                          {" "}
+                          {">"}{" "}
+                        </span>
+                        <span className="font-bold text-pink-300 dark:text-blue-300 dar">
+                          const
+                        </span>{" "}
+                        frontend = ["Reactjs", "JavaScript", "CSS", "Tailwindcss"];{" "}
                       </p>
                       <p className="text-sm">
-                        <span className="text-pink-300"> {">"} </span> const
-                        techWeb
-                        <span className="font-bold text-pink-300">3</span> =
-                        ["Solidity", "Web3.js", "Ethers.js"];{" "}
+                        <span className="text-blue-300  dark:text-pink-300">
+                          {" "}
+                          {">"}{" "}
+                        </span>
+                        <span className="font-bold text-pink-300 dark:text-blue-300 dar">
+                          const
+                        </span>{" "}
+                        backend = ["Java", "Spring Boot"];{" "}
+                      </p>
+                      <p className="text-sm">
+                        <span className="text-blue-300  dark:text-pink-300">
+                          {" "}
+                          {">"}{" "}
+                        </span>
+                        <span className="font-bold text-pink-300 dark:text-blue-300">
+                          const
+                        </span>{" "}
+                        techs = ["Docker", "GIT", "RESTful services", "Spring
+                        Framework", "Maven", "Gradle", "npm", "yarn"];{" "}
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-center space-x-8">
-                  <Link to="/projects" className="transition duration-300">
-        Projects
-      </Link>
+                    <Link to="/projects" className="transition duration-300">
+                      Projects
+                    </Link>
                     <a
                       href="https://www.youtube.com/@platonfarkndapaylasmlar637/videos"
                       target={"_blank"}
