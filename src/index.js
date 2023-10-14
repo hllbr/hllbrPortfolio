@@ -21,7 +21,7 @@ root.render(
       <ThemeProvider attribute="class">
         <Router>
           <Routes>
-            <Route path="/home" element={<App />} />
+            <Route path="/" element={<App />} />
 
             <Route
               path="/projects"
@@ -31,7 +31,7 @@ root.render(
                 </ApolloProvider>
               }
             />
-            <Route path="/" element={<Navigate replace to="/home" />} />
+            <Route path="/" element={<Navigate replace to="/" />} />
           </Routes>
         </Router>
       </ThemeProvider>

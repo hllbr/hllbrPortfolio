@@ -157,8 +157,8 @@ function App() {
                         <span className="font-bold text-pink-300 dark:text-blue-300">
                           const
                         </span>{" "}
-                        techs = ["Docker", "GIT", "RESTful services", "Spring
-                        Framework", "Maven", "Gradle", "npm", "yarn"];{" "}
+                        techs = ["GIT", "RESTful services", "Spring
+                        Framework"];{" "}
                       </p>
                     </div>
                   </div>
